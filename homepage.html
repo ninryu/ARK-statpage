@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+	<head>
+		<meta charset="UTF-8"> 
+		<title>対策本部</title>
+		<link rel="icon" type="image/png" href="logos/favicon.png">
+		<link rel="stylesheet" href="animate-min.css">
+		<script type="text/javascript">
+			function timeUpd(){
+				var now     = new Date,
+				hours   = now.getHours(),
+				minutes = now.getMinutes(),
+				date = now.getDate(),
+				month = now.getMonth() + 1,
+				weekday = "",
+				year = now.getFullYear(),
+				t_str = (hours < 10 ? "0" + hours : hours) + "時" + (minutes < 10? "0" + minutes : minutes) + "分" + "<br>" + date + "日" + "" + (month < 10 ? "0" + month : month) + "月"
+				document.getElementById('time').innerHTML = t_str;
+				if (now.getDay() == 0) {
+					weekday = "日曜日"
+				}	
+				else if(now.getDay() == 1) {
+					weekday = "月曜日"
+				}
+				else if(now.getDay() == 2) {
+					weekday = "火曜日"
+				}
+				else if(now.getDay() == 3) {
+					weekday = "水曜日"
+				}
+				else if(now.getDay() == 4) {
+					weekday = "木曜日"
+				}
+				else if(now.getDay() == 5) {
+					weekday = "金曜日"
+				}
+				else if(now.getDay() == 6) {
+					weekday = "土曜日"
+				}
+				document.getElementById('yearAndWeekday').innerHTML = year + "年," + weekday
+			}
+		</script>
+	</head>
+	
+	<style>
+	
+		html, body {
+			margin: 0;
+			width: 100%;
+			height: 100%;
+			background-color: #111111;
+		}
+		
+		@font-face{
+			font-family: link;
+			src: url('fonts/ubuntu-font/Oswald-Light.ttf');
+		}
+		
+		@font-face{
+			font-family: main;
+			src: url('fonts/ubuntu-font/Ubuntu-R.ttf');
+		}
+		
+		.linkHeader{
+			font-face: main;
+			font-size: 14px;
+			padding-bottom: 0px;
+			margin: 0px;
+			color: #bdc3c7;
+		}
+		
+		.column {
+			width: 31%;
+			float: left;
+			padding: 0px 0px 0px 10px
+		}
+		
+		.imagebg{
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: top;
+		}
+		
+		.main{
+			width: 100%;
+			max-width: 720px;
+			margin: 60px auto;
+			margin-top: -30px;
+		}
+		
+		.timeAndDate{
+			padding-top: 60px;
+			text-align: center;
+			font-family: main;
+			font-size: 60px;
+			color: #FFFFFF
+		}
+		
+		.yearAndDay{
+			padding-bottom: 60px;
+			text-align: center;
+			font-family: main;
+			font-size: 42px;
+			color: #FFFFFF
+		}
+		
+		A:link {
+			text-decoration: none; /* Убирает подчеркивание для ссылок */
+			color: #FFFFFF;
+			font-family: link;
+			font-size: 16px;
+			background-repeat: no-repeat;
+			background-position: 0% 50%;
+			background-size: 12px;
+			padding: 0px 0px 0px 0px;
+		} 
+	
+		A:visited{
+			text-decoration: none;
+			color: #FFFFFF;
+		} 
+	
+		A:active{
+			text-decoration: none;
+			color: #FFFBFB;
+		}
+	
+		A:hover{
+			text-decoration: none;
+			color: #828282; /* Цвет ссылки при наведении*/
+		}
+		
+	</style>
+	
+	<body onload="timeUpd; setInterval('timeUpd()', 1000 )">
+	
+	<table vertical-align = "middle" align = "center" height = 100% width = 100% border = 0>	
+	<tr><td>
+	
+	<div class = "imagebg main animated bounceIn 0.5s" style = "background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.25) 100%), url(images/main.jpg)">
+		<i>
+		<div id = "time" class = "timeAndDate">
+		<script type="text/javascript">
+		var now     = new Date,
+				hours   = now.getHours(),
+				minutes = now.getMinutes(),
+				date = now.getDate(),
+				month = now.getMonth() + 1,
+				weekday = "",
+				year = now.getFullYear(),
+				t_str = (hours < 10 ? "0" + hours : hours) + "時" + (minutes < 10? "0" + minutes : minutes) + "分" + "<br>" + date + "日" + "" + (month < 10 ? "0" + month : month) + "月"
+				document.getElementById('time').innerHTML = t_str;
+
+		</script>
+		</div>
+		<div id = "yearAndWeekday" class = "yearAndDay">
+		<script type="text/javascript">
+			var now = new Date,
+			weekday = "",
+			year = now.getFullYear()
+			if (now.getDay() == 0) {
+					weekday = "日曜日"
+			}	
+			else if(now.getDay() == 1) {
+				weekday = "月曜日"
+			}
+			else if(now.getDay() == 2) {
+				weekday = "火曜日"
+			}
+			else if(now.getDay() == 3) {
+					weekday = "水曜日"
+			}
+			else if(now.getDay() == 4) {
+					weekday = "木曜日"
+			}
+			else if(now.getDay() == 5) {
+					weekday = "金曜日"
+			}
+			else if(now.getDay() == 6) {
+					weekday = "土曜日"
+			}
+			document.getElementById('yearAndWeekday').innerHTML = year + "年," + weekday
+		</script>
+		</div>
+		</i>
+	</div>
+	
+	
+	<div class = "main animated bounceIn 0.5s">
+		<div class = "column">
+			<b class = "linkHeader">通信</b>
+			<br><a href="https://myanimelist.net/">MAL</a>
+			<br><a href="https://twitter.com/">Twitter</a>
+			<br><a href="https://discordapp.com/">Discord</a>>
+			<br><a href="https://www.youtube.com/feed/subscriptions">Youtube</a>
+			<br><a href="https://mail.protonmail.com/">Mail</a>
+			<br><a href="https://github.com/">Github</a>
+
+			
+		</div>
+		<div class = "column" style = "padding-left: 20px">
+			<b class = "linkHeader">画廊</b>
+			<br><a href="https://www.pixiv.net/">Pixiv</a>
+			<br><a href="https://www.deviantart.com/ninryu">DeviantArt</a>
+			<br><a href="https://www.zerochan.net/">Zerochan</a>
+			<br>
+			<br><b class = "linkHeader">音楽</b>
+			<br><a href="https://player.fm/">Player.fm</a>
+			<br><a href="https://soundcloud.com/stream">Soundcloud</a>
+			<br><a href="https://maximumfun.org/">Maximum Fun</a>
+		</div>
+		<div class = "column" style = "padding-left: 20px">
+			<b class = "linkHeader">アニメ</b>
+			<br><a href="https://nyaa.si/">Nyaa</a>
+			<br><a href="https://animetosho.org/">Anime Tosho</a>
+			<br><a href="https://twist.moe/">Anime Twist</a>
+			<br>
+			<br><b class = "linkHeader">漫画</b>
+			<br><a href="https://mangadex.org/">Mangadex</a>
+			<br><a href="https://mangaplus.shueisha.co.jp/">Mangaplus</a>
+			<br><a href="https://dynasty-scans.com/">Dynasty Reader</a>
+		</div>
+	</div>
+	
+	</td></tr>
+	</table>
+	
+	</body>
+	
+</html>
